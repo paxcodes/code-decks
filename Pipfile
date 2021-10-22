@@ -9,6 +9,10 @@ django-tailwind = "*"
 
 [dev-packages]
 pytest = "*"
+bandit = "*"
+pylama = "*"
+isort = "*"
+autoflake = "*"
 
 [requires]
 python_version = "3.8"

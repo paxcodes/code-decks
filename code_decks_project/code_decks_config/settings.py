@@ -48,7 +48,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "code_decks.urls"
+ROOT_URLCONF = "code_decks_config.urls"
 
 TEMPLATES = [
     {
@@ -66,8 +66,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "code_decks.wsgi.application"
-
+WSGI_APPLICATION = "code_decks_config.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

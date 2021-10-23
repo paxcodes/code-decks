@@ -4,16 +4,6 @@
         "--exclude",
         "/tests"
     ],
-    "runOnSave.statusMessageTimeout": 3000,
-    "runOnSave.commands": [
-        {
-            "match": ".*\\.py$",
-            "command": "autoflake -i --remove-all-unused-imports --remove-unused-variables ${file}",
-            "runIn": "backend",
-            "runningStatusMessage": "Removing unused imports and variables in ${fileBasename}",
-            "finishStatusMessage": "${fileBasename} cleaned. 🍰 ✨"
-        },
-    ],
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     }

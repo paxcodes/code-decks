@@ -10,21 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from os import environ
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+SECRET_KEY = environ.get("SECRET_KEY")
+DEBUG = environ.get("DEBUG")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-(+w)2f-5iwfnzic3!-lqijb0pk8%i$tx(oejx(!u##dy1g9pn0"
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -48,7 +44,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "code_decks.urls"
+ROOT_URLCONF = "code_decks_config.urls"
 
 TEMPLATES = [
     {
@@ -66,8 +62,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "code_decks.wsgi.application"
-
+WSGI_APPLICATION = "code_decks_config.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
